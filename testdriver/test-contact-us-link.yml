@@ -1,0 +1,18 @@
+version: 4.1.32
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Locate the "Contact Us" link in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Contact Us
+        description: contact link in the navigation menu
+        action: click
+  - prompt: Click the "Contact Us" link.
+    commands: []
+  - prompt: >-
+      Assert that the Contact Us page loads correctly.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: Welcome to Your QA Journey with QAble
