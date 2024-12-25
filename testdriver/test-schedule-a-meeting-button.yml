@@ -1,0 +1,24 @@
+version: 4.1.32
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Locate the "Schedule a Meeting" button.
+    commands:
+      - command: hover-text
+        text: Schedule a Meeting
+        description: button in the top right corner
+        action: click
+  - prompt: Click the "Schedule a Meeting" button.
+    commands:
+      - command: hover-text
+        text: Schedule a Meeting
+        description: button in the top right corner
+        action: click
+  - prompt: >-
+      Assert that the scheduling page or form appears correctly.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the scheduling form is visible
